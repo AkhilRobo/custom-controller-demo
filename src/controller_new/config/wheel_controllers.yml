@@ -4,7 +4,7 @@ controller_manager:
 
 
     forward_velocity_controller:
-      type: my_robot_controller/ForwardVelocityController # This MUST match the plugin 'name'
+      type: my_robot_controller/ForwardVelocityController
 
 
 forward_velocity_controller:

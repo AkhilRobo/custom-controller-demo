@@ -8,7 +8,7 @@
 #include "rclcpp/subscription.hpp"
 #include "std_msgs/msg/float64.hpp"
 #include "rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp"
-#include "realtime_tools/realtime_box.h"
+#include "realtime_tools/realtime_box.hpp"
 
 namespace my_robot_controller
 {

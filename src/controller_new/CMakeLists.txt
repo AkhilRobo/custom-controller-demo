@@ -13,14 +13,47 @@ find_package(rclcpp REQUIRED)
 find_package(rclcpp_lifecycle REQUIRED)
 find_package(hardware_interface REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(realtime_tools REQUIRED)
+
+
+add_library(${PROJECT_NAME} SHARED
+  src/forward_velocity_controller.cpp
+)
+
+target_include_directories(controller_new PUBLIC include)
+
+
+ament_target_dependencies(${PROJECT_NAME}
+  controller_interface
+  hardware_interface
+  pluginlib
+  rclcpp
+  rclcpp_lifecycle
+  realtime_tools
+)
+
+pluginlib_export_plugin_description_file(controller_interface controller_new_plugins.xml)
+
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+
 
 install(DIRECTORY
   launch
   config
   urdf
   rviz
+  include
+  src
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(FILES controller_new_plugins.xml
+  DESTINATION ${SHARE_DESTINATION}
+)
 
 ament_package()

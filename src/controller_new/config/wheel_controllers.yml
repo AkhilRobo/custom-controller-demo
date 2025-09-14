@@ -1,0 +1,12 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100 # Hz
+
+
+    forward_velocity_controller:
+      type: my_robot_controller/ForwardVelocityController # This MUST match the plugin 'name'
+
+
+forward_velocity_controller:
+  ros__parameters:
+    joint: "wheel_joint"

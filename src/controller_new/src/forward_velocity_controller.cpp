@@ -2,7 +2,7 @@
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 #include "pluginlib/class_list_macros.hpp"
 
-namespace my_robot_controller
+namespace controller_new
 {
 controller_interface::CallbackReturn ForwardVelocityController::on_init()
 {
@@ -70,5 +70,5 @@ controller_interface::return_type ForwardVelocityController::update(const rclcpp
 
 }  
 PLUGINLIB_EXPORT_CLASS(
-  my_robot_controller::ForwardVelocityController,
+  controller_new::ForwardVelocityController,
   controller_interface::ControllerInterface)

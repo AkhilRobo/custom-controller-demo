@@ -2,11 +2,18 @@ controller_manager:
   ros__parameters:
     update_rate: 100 # Hz
 
+    # ADD THE JOINT STATE BROADCASTER TO THE LIST OF CONTROLLERS
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
 
     forward_velocity_controller:
-      type: my_robot_controller/ForwardVelocityController
+      type: controller_new/ForwardVelocityController
 
+# Configuration for the Joint State Broadcaster (it usually has no specific params)
+joint_state_broadcaster:
+  ros__parameters: {}
 
+# Configuration for your controller
 forward_velocity_controller:
   ros__parameters:
     joint: "wheel_joint"

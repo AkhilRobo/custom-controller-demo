@@ -1,6 +1,6 @@
 <library path="controller_new">
-  <class name="my_robot_controller/ForwardVelocityController"
-         type="my_robot_controller::ForwardVelocityController"
+  <class name="controller_new/ForwardVelocityController"
+         type="controller_new::ForwardVelocityController"
          base_class_type="controller_interface::ControllerInterface">
     <description>
       A simple controller that forwards velocity commands to a single joint.

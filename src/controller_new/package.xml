@@ -22,6 +22,6 @@
 
   <export>
     <build_type>ament_cmake</build_type>
-      <controller_interface plugin="${prefix}/my_robot_controller_plugins.xml"/>
+      <controller_interface plugin="${prefix}/controller_new_plugins.xml"/>
   </export>
 </package>

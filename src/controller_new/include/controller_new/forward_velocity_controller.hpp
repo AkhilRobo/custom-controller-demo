@@ -10,7 +10,7 @@
 #include "rclcpp_lifecycle/node_interfaces/lifecycle_node_interface.hpp"
 #include "realtime_tools/realtime_box.hpp"
 
-namespace my_robot_controller
+namespace controller_new
 {
 class ForwardVelocityController : public controller_interface::ControllerInterface
 {

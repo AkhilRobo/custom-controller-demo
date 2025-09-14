@@ -53,7 +53,8 @@ install(DIRECTORY
 )
 
 install(FILES controller_new_plugins.xml
-  DESTINATION ${SHARE_DESTINATION}
+  DESTINATION share/${PROJECT_NAME}
 )
+
 
 ament_package()

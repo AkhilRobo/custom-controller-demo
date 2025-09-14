@@ -10,6 +10,7 @@ controller_interface::CallbackReturn ForwardVelocityController::on_init()
   return controller_interface::CallbackReturn::SUCCESS;
 }
 
+
 controller_interface::CallbackReturn ForwardVelocityController::on_configure(const rclcpp_lifecycle::State & /*previous_state*/)
 {
   joint_name_ = get_node()->get_parameter("joint").as_string();
@@ -36,9 +37,15 @@ controller_interface::InterfaceConfiguration ForwardVelocityController::command_
 }
 
 controller_interface::InterfaceConfiguration ForwardVelocityController::state_interface_configuration() const
+
 {
-  return controller_interface::InterfaceConfiguration{controller_interface::interface_configuration_type::NONE};
+  controller_interface::InterfaceConfiguration config;
+  config.type = controller_interface::interface_configuration_type::NONE;
+  return config;
 }
+
+
+
 
 controller_interface::CallbackReturn ForwardVelocityController::on_activate(const rclcpp_lifecycle::State & /*previous_state*/)
 {

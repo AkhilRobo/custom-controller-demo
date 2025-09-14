@@ -16,7 +16,7 @@ Unlike the default `velocity_controllers/ForwardCommandController`, this control
 ```mermaid
 flowchart LR
     subgraph User
-        A[Publish /forward_velocity_controller/commands] --> B
+        A[Publish: `/forward_velocity_controller/commands`] --> B
     end
 
     subgraph ControllerManager
@@ -24,6 +24,6 @@ flowchart LR
     end
 
     C -->|Updates joint states| D[Joint State Broadcaster]
-    D -->|Publishes| E[/joint_states]
+    D -->|Publishes| E["/joint_states"]
     E --> F[Robot State Publisher]
-    F -->|Publishes transforms| G[/tf]
+    F -->|Publishes transforms| G["/tf"]
